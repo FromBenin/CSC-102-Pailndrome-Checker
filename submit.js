@@ -11,20 +11,30 @@ function PALINDROME() {
     // The final variable I created is used to display the result of the form.
     var result = "";
 
-    // This if statement I added executes if the string variable is empty when the form if being submitted
-    if (string == "") {
-        result = "Give an input";
-    }
-    // I then added an else if statement which will execute if the replacePal variable is not equal to the joinPal variable.
-    else if (replacePal !== joinPal) {
-        result = "The word, phrase or sequence written above is not a palindrome.";
-    }
-    // I ended the else if statement with an else statement which executes if the else if condition is not true.
-    else {
-        result = "The word, phrase or sequence written above is a palindrome.";
-    }
+    while (true) {
+        // First call the string variable.
+        string;
+        // And the replacePal variable.
+        replacePal;
+        
+        // This if statement will only executes if the string variable is empty when the form if being submitted.
+        if (string == "") {
+            result = "Give an input";
+            break;
+        }
+        // I then added an else if statement which will execute if the replacePal variable is not equal to the joinPal variable.
+        else if (replacePal !== joinPal) {
+            result = "The word, phrase or sequence written above is not a palindrome.";
+            break;
+        }
+        // I ended the else if statement with an else statement which executes if the else if condition is not true.
+        else {
+            result = "The word, phrase or sequence written above is a palindrome.";
+            break;
+        }
+}
 
-    // The next line of code I wrote is used to display the result of the form after accepting the input.
+    // The next line of code I wrote is to display the result of the form after accepting the input.
     document.getElementById("result").innerHTML = result;
     // The return function I added below returns false so as to prevent the form from submitting.
     return false;
